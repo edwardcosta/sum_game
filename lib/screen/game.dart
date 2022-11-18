@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_swipe_detector/flutter_swipe_detector.dart';
 import 'package:sum_game/components/button.dart';
+import 'package:sum_game/components/empty_board.dart';
 import 'package:sum_game/components/score_board.dart';
 import 'package:sum_game/const/colors.dart';
 
@@ -49,7 +50,7 @@ class _GameState extends ConsumerState<Game> with WidgetsBindingObserver{
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                          padding: const EdgeInsets.symmetric(horizontal: 32.0),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
@@ -79,7 +80,6 @@ class _GameState extends ConsumerState<Game> with WidgetsBindingObserver{
                                         icon: Icons.refresh,
                                         onPressed: (){},
                                       ),
-                                      //TODO: Add the New Game button
                                     ],
                                   )
                                 ],
@@ -87,7 +87,12 @@ class _GameState extends ConsumerState<Game> with WidgetsBindingObserver{
                             ],
                           ),
                         ),
-                        //TODO: Add the Empty Board Widget
+                        const SizedBox(height: 32.0,),
+                        Stack(
+                          children: [
+                            const EmptyBoardWidget(),
+                          ],
+                        ),
                       ],
                     ),
                   ),
