@@ -19,8 +19,7 @@ class ScoreBoard extends ConsumerWidget {
         Score(
             label: 'Best',
             score: '0',
-            padding:
-            const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0)),
+            ),
       ],
     );
   }
