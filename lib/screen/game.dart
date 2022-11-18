@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_swipe_detector/flutter_swipe_detector.dart';
+import 'package:sum_game/components/button.dart';
 import 'package:sum_game/components/score_board.dart';
 import 'package:sum_game/const/colors.dart';
 
@@ -69,7 +70,15 @@ class _GameState extends ConsumerState<Game> with WidgetsBindingObserver{
                                   ),
                                   Row(
                                     children: [
-                                      //TODO: Add the Undo button
+                                      ButtonWidget(
+                                        icon: Icons.undo,
+                                        onPressed: (){},
+                                      ),
+                                      const SizedBox(width: 16.0,),
+                                      ButtonWidget(
+                                        icon: Icons.refresh,
+                                        onPressed: (){},
+                                      ),
                                       //TODO: Add the New Game button
                                     ],
                                   )
